@@ -9,10 +9,12 @@ const User = require('./models/User');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors({
-  origin: "https://inventory-frontend-wbd6.onrender.com",
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true,
+  })
+);
 // app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
