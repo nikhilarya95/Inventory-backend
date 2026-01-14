@@ -187,7 +187,7 @@ const checkServerStatus = () => {
 
 const initCronJobs = () => {
   // Run heartbeat every 10 minutes
-  cron.schedule('*/10 * * * *', checkServerStatus);
+  cron.schedule('*/1 * * * *', checkServerStatus);
 
   // cron.schedule('0 9 * * *', checkLowStock);
   // cron.schedule('0 8 * * *', sendOrderReminders);
